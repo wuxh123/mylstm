@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>search</title>
+</head>
+<body bgcolor="DodgerBlue">
+    <div>
+        <ol>
+          <li>目前采用模型是基于神经网络的LSTM、模型两种预测算法</li>
+          <li>参数有:涨跌幅、换手率、交易量、收盘价、开盘价</li>
+          <li>学习数据初始日期2019.01.01</li>
+          <li>迭代次数10000次</li>
+          <li>目前只能预测下一个交易日股价</li>
+          <li>数据爬取自新浪财经</li>
+          <li>每日5点左右才可以取得当日交易数据</li>
+        </ol>
+    </div>
+    <div style="text-align:center;color:#F0F8FF">
+        <br/><br/><br/>
+        <font face="宋体" size="+5">LSTM价格预测</font><br/>
+        <br/><br/>
+        <form action ='/cal' method='post'>
+            <input type="txt"  rows="4" cols="30" placeholder="请输编码...."
+                   name='code' style="height:38px;width:480px;">
+            <button type="submit" class="search-submit" style="height:35px;width:60px;">计算</button>
+        </form>
+        <br/><br/>
+                {{ predict }}
+            <h3>{{ tips }}</h3>
+    </div>
+
+<!--    <div style="text-align:center;color:#F0F8FF">-->
+<!--        <br/><br/><br/>-->
+<!--        <font face="宋体" size="+5">ARIMA价格预测</font><br/>-->
+<!--        <br/><br/>-->
+<!--        <form action ='/cal_1' method='post'>-->
+<!--            <input type="txt"  rows="4" cols="30" placeholder="请输编码...."-->
+<!--                   name='code' style="height:38px;width:480px;">-->
+<!--            <button type="submit" class="search-submit" style="height:35px;width:60px;">计算</button>-->
+<!--        </form>-->
+<!--        <br/><br/>-->
+<!--                {{ predict_1 }}-->
+<!--            <h3>{{ tips_1 }}</h3>-->
+<!--    </div>-->
+</body>
+</html>
